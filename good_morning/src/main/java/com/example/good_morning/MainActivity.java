@@ -1,4 +1,4 @@
-package com.example.laura.good_morning;
+package com.example.good_morning;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
