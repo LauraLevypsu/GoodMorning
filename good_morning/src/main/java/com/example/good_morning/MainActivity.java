@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
         signInButton.setOnClickListener(
                 new View.OnClickListener(){
-                    public void onClick(View account_settings_activity){
-                        startActivity(new Intent(MainActivity.this, AccountSettingsActivityView.class));
+                    public void onClick(View activity_main){
+                        Intent intent = new Intent (MainActivity.this, AccountSettingsActivityView.class);
+                        MainActivity.this.startActivity(intent);
+                        //startActivity(new Intent(MainActivity.this, AccountSettingsActivityView.class));
                     }
                 }
 
