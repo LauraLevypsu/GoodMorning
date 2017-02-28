@@ -7,6 +7,9 @@ import android.view.View;
 import android.content.Intent;
 import android.widget.*;
 import android.app.Activity;
+
+import com.example.good_morning.R;
+
 import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
