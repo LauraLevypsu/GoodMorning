@@ -14,19 +14,20 @@ import java.util.*;
 
 public class AccountSettingsActivityView extends Activity {
 
-    protected void onCreate (Bundle savedIntanceState){
+    protected void onCreate (Bundle savedInstanceState){
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.account_settings_activity);
 
         Account account;
-
-        super.onCreate(savedIntanceState);
-        setContentView(R.layout.account_settings_activity);
 
         final EditText etZipcode = (EditText) findViewById(R.id.etZipcode);
         final EditText etPrepTime = (EditText) findViewById(R.id.etPrepTime);
         final EditText etEmail = (EditText) findViewById(R.id.etEmail);
 
         etZipcode.setText(Account.zipcode);
-        etPrepTime.setText(Account.prepTime);
+        etPrepTime.setText(String.valueOf(Account.prepTime));
+        //etPrepTime.setText("0");
         etEmail.setText(Account.email);
 
         Button saveButton = (Button) findViewById(R.id.bSave);
@@ -41,6 +42,8 @@ public class AccountSettingsActivityView extends Activity {
                         Account.zipcode = zip;
                         Account.prepTime = prepTime;
                         Account.email = email;
+
+                        startActivity (new Intent(AccountSettingsActivityView.this, RecordActivityView.class));
                     }
                 }
         );

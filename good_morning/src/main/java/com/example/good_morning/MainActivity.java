@@ -20,16 +20,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button signInButton = (Button) findViewById(R.id.bLogin);
+        /*EditText emailEditText = (EditText) findViewById(R.id.etEmail);
+        EditText passwordEditText = (EditText) findViewById(R.id.etPassword);
+
+        String email = emailEditText.getText().toString();
+        String password = passwordEditText.getText().toString();*/
 
         signInButton.setOnClickListener(
                 new View.OnClickListener(){
                     public void onClick(View activity_main){
-                        Intent intent = new Intent (MainActivity.this, AccountSettingsActivityView.class);
-                        MainActivity.this.startActivity(intent);
-                        //startActivity(new Intent(MainActivity.this, AccountSettingsActivityView.class));
+                        //Intent intent = new Intent (MainActivity.this, AccountSettingsActivityView.class);
+                        //startActivity(intent);//////////////
+                        startActivity(new Intent(MainActivity.this, AccountSettingsActivityView.class));
                     }
                 }
-
         );
     }
 }

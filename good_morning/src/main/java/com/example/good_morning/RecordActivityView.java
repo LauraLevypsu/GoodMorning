@@ -20,19 +20,21 @@ public class RecordActivityView extends Activity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.record_activity);
-        days= rec.getDays();
+        /*days= rec.getDays();
         String record = " ";
         for(Day day: days){
             String toAdd = (day.getDayStart()
                 +": slept " +day.getSleep()+" hours\n");
             record.concat(toAdd);
-        }
+        }*/
 
         TextView recView = (TextView)findViewById(R.id.tvRecord);
-        recView.setText(record);
+        //recView.setText(record);
+        recView.setText("...empty...");
 
         TextView avgSleepView = (TextView) findViewById(R.id.tvAvgSleep);
-        avgSleepView.setText("Average sleep per night: "+rec.getAvgSleep());
+        //avgSleepView.setText("Average sleep per night: "+rec.getAvgSleep());
+        avgSleepView.setText("...empty...");
 
     }
 }
