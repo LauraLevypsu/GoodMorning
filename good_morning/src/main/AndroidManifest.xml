@@ -19,6 +19,9 @@
         <activity android:name=".AccountSettingsActivityView"
             android:label= "Good_morning">
         </activity>
+        <activity android:name=".RecordActivityView"
+            android:label="Good_morning">
+        </activity>
     </application>
 
 </manifest>

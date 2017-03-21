@@ -20,6 +20,10 @@ public class RecordActivityView extends Activity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.record_activity);
+
+        Button toSettingsButton = (Button) findViewById(R.id.bToSettings);
+        Button signOutButton = (Button) findViewById(R.id.bSignOut);
+
         /*days= rec.getDays();
         String record = " ";
         for(Day day: days){
@@ -35,6 +39,25 @@ public class RecordActivityView extends Activity{
         TextView avgSleepView = (TextView) findViewById(R.id.tvAvgSleep);
         //avgSleepView.setText("Average sleep per night: "+rec.getAvgSleep());
         avgSleepView.setText("...empty...");
+
+        toSettingsButton.setOnClickListener(
+                new View.OnClickListener(){
+                    public void onClick(View record_activity){
+                        startActivity(new Intent(RecordActivityView.this, AccountSettingsActivityView.class));
+                    }
+                }
+        );
+
+        signOutButton.setOnClickListener(
+                new View.OnClickListener(){
+                    public void onClick(View record_activity){
+                        startActivity(new Intent(RecordActivityView.this, MainActivity.class));
+                    }
+
+                }
+        );
+
+
 
     }
 }

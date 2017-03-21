@@ -43,7 +43,8 @@ public class AccountSettingsActivityView extends Activity {
                         Account.prepTime = prepTime;
                         Account.email = email;
 
-                        startActivity (new Intent(AccountSettingsActivityView.this, RecordActivityView.class));
+                        Intent intent = new Intent(AccountSettingsActivityView.this, RecordActivityView.class);
+                        startActivity (intent);
                     }
                 }
         );
